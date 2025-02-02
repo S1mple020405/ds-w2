@@ -1,16 +1,15 @@
-name: Test Action
+name: CI Workflow with Email Step
 
 on:
   push:
     branches:
-      - main  # or any branch you want to trigger the action
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: 23f2003621@ds.study.iitm.ac.in
-        uses: actions/checkout@v3
-
-      - name: Print greeting
         run: echo "Hello, world!"
