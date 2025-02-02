@@ -7,7 +7,10 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
       - name: 23f2003621@ds.study.iitm.ac.in
+        uses: actions/checkout@v3
+
+      - name: Print greeting
         run: echo "Hello, world!"
-      
